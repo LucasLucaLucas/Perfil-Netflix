@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  
+}
+
+ body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px
+    
+}
+
+.titulo {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 25px;
+   
+  
+}
+
+.titulo > h1 {
+    font-weight: 100
+}
+
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.perfil > img {
+   height: 150px;
+   border-radius: 3px;
+  
+
+}
+
+.perfil > img:hover {
+    border: 3px solid white;
+}
+
+.perfil > p {
+    color: #585858;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+
+
+.botao {
+    margin-top: 85px;
+    height: 50px;
+
+}
+
+button {
+    font-size: 18px;
+    width: 265px;
+    height: 45px;
+    background-color: transparent;
+    color: #808080;
+    border: none;
+    border: 3px solid #808080;
+
+}
+
+/* Adiciona a mudança de cor do texto ao passar o mouse no container da imagem */
+.perfil:hover > p {
+    color: #F4F4F4;
+}
+
+button:hover {
+    color:#F4F4F4;
+    border: 3px solid #F4F4F4;
+    cursor: pointer;
+}
+
+
+
+
+/* Explicação do flex direction collum no body
+
+
+Vamos pensar no layout como se fosse um brinquedo de montar, onde cada peça tem um lugar especial e a gente precisa organizar essas peças de uma forma específica. 😊
+
+Imagine o **body** (a parte maior onde tudo vai dentro) como uma prateleira onde você quer colocar duas coisas:
+
+1. **Um título** ("Quem está assistindo?") no topo.
+2. **Uma prateleira menor** que contém as fotos e o botão. Essa prateleira menor é o `.container`.
+
+Para fazer isso, precisamos que o **body** organize essas coisas de cima para baixo, uma embaixo da outra, como uma coluna. É por isso que usamos `flex-direction: column` no **body**. Isso ajuda a colocar o **título** primeiro, depois a **prateleira com as fotos** e, logo abaixo dessa prateleira, o **botão**.
+
+Agora, dentro da **prateleira de fotos** (`.container`), queremos que as imagens fiquem lado a lado, como uma fileira. Então, colocamos `display: flex` no `.container`, mas **sem `flex-direction: column`** ali. Quando não colocamos `flex-direction`, o padrão é organizar em **linha** (ou seja, as fotos ficam uma do lado da outra).
+
+Por último, colocamos o botão **fora da prateleira de fotos**, logo abaixo. Como o **body** está em "modo coluna", ele coloca o botão logo embaixo da prateleira de fotos automaticamente, porque é o próximo "brinquedo" a ser colocado na prateleira.
+
+Então, em resumo:
+
+- O `flex-direction: column` no **body** organiza os itens principais (título, prateleira de fotos, e botão) **em coluna** (de cima para baixo).
+- Dentro da **prateleira de fotos** (`.container`), as fotos ficam em linha porque `flex-direction` não foi alterado ali.
+
+É como se a prateleira maior (o **body**) tivesse várias prateleiras menores dentro, cada uma organizada do jeito que a gente quer. 😊 */
